@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>手机验证码登录</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+    <div class = "main">
+        <div class="error"></div>
+        <div class = "top-title">信用钱包欢迎您</div>
+        <div class = "main-style">
+            <input type="text" class="mobile inp main-style-input" number placeholder="请输入手机号">
+            <div class="cha fr">&Chi;</div>
+        </div>
+        <div class = "main-style fl">
+            <div class= "verify-left fl">
+                <input type="text" class="code inp main-style-input" placeholder="请输入短信验证码">
+            </div>
+            <div class = "verify-right fr verify-bnt">获取验证码</div>
+        </div>
+        <div class="clean"></div>
+        <div class="read">注册代表您同意 <a href="https://baidu.com" class="red">《信用钱包用户协商》</a></div>
+        <div class = "btn">注册/登录</div>
+        <div class="bottom fr"><a href="passwordLogin.html">密码登录</a></div>
+    </div>
+</body>
+<script src="js/common.js"></script>
+<script>
+let mobile = document.querySelector(".mobile");
+let cha = document.getElementsByClassName('cha')[0];
+let error= document.querySelector(".error");
+// var mobileValue = mobile.value; -??为什么赋值之后调用不可以
+// 手机校对
+let mReg = /^[1][3,4,5,7,8][0-9]{9}$/;
+mobile.addEventListener('click',function(){
+    // 显示
+    cha.style.display = "block";
+    // 不能用 ？？？
+    // cha.style.visibility = "visable";
+    // 隐藏
+    // cha.style.display = "none";
+    // cha.style.visibility = "hidden";
+},true);
+mobile.addEventListener("blur",function(){
+    if(!mReg.test(mobile.value)){
+        error.style.display = "block";
+        error.innerHTML = "手机号格式不正确";
+    }
+    cha.style.display = "none";
+})
+cha.addEventListener('click',function(){
+    cha.style.display = "none";
+},true);
+
+
+</script>
+</html>
