@@ -82,14 +82,13 @@ input.inp:focus{
 }
 .verify-right{
     width: 30%;
-}
-.verify-bnt{
     text-align: right;
     border-left: 1px dotted #eee;
     color: #9a9a9a;
     font-weight: 300;
     font-size:15px;
 }
+
 /* 注册阅读样式 */
 .read{
     font-size: 13px;
