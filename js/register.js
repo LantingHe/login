@@ -49,10 +49,10 @@
         changeColorReg(mobile,code,verifyBnt,password,verify,submit)
     }
     verify.oninput = function(){
-        changeColorReg(mobile,code,nullpassword,verify,submit)
+        changeColorReg(mobile,code,null,password,verify,submit)
     }
     password.oninput = function(){
-        changeColorReg(mobile,code,nullpassword,verify,submit)
+        changeColorReg(mobile,code,null,password,verify,submit)
     }
     submit.onclick = function(){
         if(mobile.value == "" || code.value == "" || verify.value ==""|| password.value == ""){
